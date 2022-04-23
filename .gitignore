@@ -3,6 +3,7 @@
 /.firebase
 /src/img
 /src/imgCategories
+/public
 
 # dependencies
 /node_modules

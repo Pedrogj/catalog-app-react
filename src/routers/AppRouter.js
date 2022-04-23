@@ -12,6 +12,7 @@ import { Muebleria } from "../components/categoryScreen/Muebleria";
 import { Tuberias } from "../components/categoryScreen/Tuberias";
 import { Aseo } from "../components/categoryScreen/Aseo";
 import { DataContext } from "../context/DataContext";
+import { NotFound } from "../components/notFountScreen/NotFound";
 
 export const AppRouter = () => {
   const { loading } = useContext(DataContext);
@@ -32,6 +33,8 @@ export const AppRouter = () => {
         <Route path="/category/muebleria" element={<Muebleria />} />
         <Route path="/category/tuberias" element={<Tuberias />} />
         <Route path="/category/aseo" element={<Aseo />} />
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
