@@ -25,7 +25,7 @@ export const Footer = () => {
               <FaMapMarkerAlt />
             </Icon>
             <Text>
-              Ubicados en Camino San Bernardo 1274 vía los dominicos. Chillan,
+              Ubicados en Camino San Bernardo 1274 Vía los Dominicos. Chillan,
               Chile.
             </Text>
           </ContentTextIcon>
@@ -39,7 +39,7 @@ export const Footer = () => {
             <Icon>
               <BiTime />
             </Icon>
-            <Text>Sabado: 9:00 AM a 14:00</Text>
+            <Text>Sábado: 9:00 AM a 14:00</Text>
           </ContentTextIcon>
           <ContentTextIcon>
             <Icon>
