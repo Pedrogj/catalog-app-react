@@ -15,6 +15,8 @@ import {
 } from "./ProductIdStyle";
 
 export const ProductId = () => {
+  const phone = process.env.REACT_APP_MESSAGE;
+
   const navigate = useNavigate();
 
   const { getProductById } = useContext(DataContext);
@@ -46,7 +48,7 @@ export const ProductId = () => {
           <Button
             target="_blank"
             rel="noreferrer"
-            href={`https://api.whatsapp.com/send?phone=56936672189&text=hola%20Ferromaster%20quiero%20consultar%20el%20Precio%20de%20${product.name}`}
+            href={`https://api.whatsapp.com/send?phone=${phone}&text=hola%20Ferromaster%20quiero%20consultar%20el%20Precio%20de:%20${product.name}`}
           >
             <BsWhatsapp /> Consulta
           </Button>

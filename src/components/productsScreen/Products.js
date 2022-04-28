@@ -5,8 +5,6 @@ import { InputSearch } from "../InputSearch/InputSearch";
 import { NotProduct } from "../notFountScreen/NotProduct";
 import { Spinner } from "../spinner/Spinner";
 import {
-  ContentBoton,
-  ButtonExit,
   Container,
   ProductContent,
   Box,
