@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 
 import { Home } from "../components/homeScreen/Home";
 import { Products } from "../components/productsScreen/Products";
@@ -17,9 +17,8 @@ import { NotFound } from "../components/notFountScreen/NotFound";
 export const AppRouter = () => {
   const { loading } = useContext(DataContext);
   return (
-    <BrowserRouter>
+    <HashRouter>
       {loading}
-
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -36,6 +35,6 @@ export const AppRouter = () => {
 
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
