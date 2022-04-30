@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { FaBars, FaTimes } from "react-icons/fa";
 import logoImg from "./../../img/logo.png";
 
 import {
   Wrapper,
   Content,
   NavLogo,
-  MenuIcon,
   ImgLogo,
   NavMenu,
   NavItem,
@@ -15,14 +13,6 @@ import {
 } from "./NavbarStyled";
 
 export const Navbar = () => {
-  const [click, setClick] = useState(false);
-
-  const handleClick = () => {
-    setClick(!click);
-  };
-
-  const Collapse = click ? <FaTimes /> : <FaBars />;
-
   return (
     <>
       <Wrapper>
@@ -32,15 +22,14 @@ export const Navbar = () => {
               <ImgLogo src={logoImg} />
             </NavLogo>
           </Link>
-          <MenuIcon onClick={() => handleClick()}>{Collapse}</MenuIcon>
-          <NavMenu click={click}>
+          <NavMenu>
             <Link to="/">
-              <NavItem onClick={() => handleClick()}>
+              <NavItem>
                 <NavLinks>Inicio</NavLinks>
               </NavItem>
             </Link>
             <Link to="/products">
-              <NavItem onClick={() => handleClick()}>
+              <NavItem>
                 <NavLinks>Productos</NavLinks>
               </NavItem>
             </Link>

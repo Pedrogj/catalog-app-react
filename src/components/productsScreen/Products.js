@@ -12,6 +12,7 @@ import {
   TextContent,
   H1,
   H3,
+  DivConten,
 } from "./ProductsStyle";
 
 export const Products = () => {
@@ -56,12 +57,14 @@ export const Products = () => {
 
   return (
     <>
-      <Container>
-        <H1>Productos</H1>
-        <InputSearch searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      </Container>
+      <DivConten>
+        <Container>
+          <H1>Productos</H1>
+          <InputSearch searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+        </Container>
 
-      {!showContent ? <Spinner /> : renderProducts}
+        {!showContent ? <Spinner /> : renderProducts}
+      </DivConten>
     </>
   );
 };

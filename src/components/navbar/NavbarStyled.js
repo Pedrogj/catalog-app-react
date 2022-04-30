@@ -54,16 +54,6 @@ export const ImgLogo = styled.img`
   }
 `;
 
-export const MenuIcon = styled.div`
-  display: none;
-
-  @media screen and (max-width: 960px) {
-    display: flex;
-    color: black;
-    font-size: 2rem;
-  }
-`;
-
 export const NavMenu = styled.ul`
   display: flex;
   align-items: center;

@@ -13,6 +13,7 @@ import { Tuberias } from "../components/categoryScreen/Tuberias";
 import { Aseo } from "../components/categoryScreen/Aseo";
 import { DataContext } from "../context/DataContext";
 import { NotFound } from "../components/notFountScreen/NotFound";
+import { NavbarMobile } from "../components/navbarMobile/NavbarMobile";
 
 export const AppRouter = () => {
   const { loading } = useContext(DataContext);
@@ -35,6 +36,7 @@ export const AppRouter = () => {
 
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <NavbarMobile />
     </HashRouter>
   );
 };

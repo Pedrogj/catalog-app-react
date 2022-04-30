@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const DivConten = styled.div`
+  height: 100vh;
+`;
+
 export const Container = styled.div`
   display: flex;
   align-items: center;
@@ -25,6 +29,10 @@ export const ProductContent = styled.div`
   gap: 30px;
   justify-content: center;
   padding: 20px;
+
+  @media screen and (max-width: 960px) {
+    padding-bottom: 100px;
+  }
 
   @media (max-width: 1300px) {
     grid-template-columns: repeat(3, 1fr);
