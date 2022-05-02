@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { DataContext } from "../../context/DataContext";
+import { cleanSearchText } from "../../utils/helpers/helpers";
 import { InputSearch } from "../InputSearch/InputSearch";
 import { NotProduct } from "../notFountScreen/NotProduct";
 import { Spinner } from "../spinner/Spinner";
@@ -29,8 +30,9 @@ export const Products = () => {
 
   // Product search function
   const search = (elements) => {
+    const text = cleanSearchText(searchTerm.toLowerCase());
     return elements.filter((element) =>
-      element.name.toLowerCase().includes(searchTerm.toLowerCase())
+      element.name.toLowerCase().includes(text)
     );
   };
 
@@ -55,6 +57,8 @@ export const Products = () => {
       <NotProduct />
     );
 
+  const requireContent = !showContent ? <Spinner /> : renderProducts;
+
   return (
     <>
       <DivConten>
@@ -62,8 +66,7 @@ export const Products = () => {
           <H1>Productos</H1>
           <InputSearch searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         </Container>
-
-        {!showContent ? <Spinner /> : renderProducts}
+        {requireContent}
       </DivConten>
     </>
   );

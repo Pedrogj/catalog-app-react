@@ -13,6 +13,7 @@ import {
   Description,
   Button,
 } from "./ProductIdStyle";
+import { routes } from "../../routers/Routes";
 
 export const ProductId = () => {
   const phone = process.env.REACT_APP_MESSAGE;
@@ -30,8 +31,10 @@ export const ProductId = () => {
   };
 
   if (!product) {
-    return <Navigate to="/" />;
+    return <Navigate to={routes.root} />;
   }
+
+  const goToWhatsapp = `https://api.whatsapp.com/send?phone=${phone}&text=hola%20Ferromaster%20quiero%20consultar%20el%20Precio%20de:%20${product.name}`;
 
   return (
     <>
@@ -45,11 +48,7 @@ export const ProductId = () => {
         <TextContent>
           <TextH1>{product.name}</TextH1>
           <Description>{product.description}</Description>
-          <Button
-            target="_blank"
-            rel="noreferrer"
-            href={`https://api.whatsapp.com/send?phone=${phone}&text=hola%20Ferromaster%20quiero%20consultar%20el%20Precio%20de:%20${product.name}`}
-          >
+          <Button target="_blank" rel="noreferrer" href={goToWhatsapp}>
             <BsWhatsapp /> Consulta
           </Button>
         </TextContent>

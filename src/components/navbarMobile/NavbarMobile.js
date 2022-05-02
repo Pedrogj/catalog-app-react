@@ -1,7 +1,7 @@
 import React from "react";
 import { AiOutlineHome, AiOutlineFileSearch } from "react-icons/ai";
-import { BiCategory } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import { routes } from "../../routers/Routes";
 import {
   DivButtons,
   HomeButton,
@@ -17,7 +17,7 @@ export const NavbarMobile = () => {
       <NavMobile>
         <DivButtons>
           <HomeButton>
-            <Link to="/">
+            <Link to={routes.root}>
               <Icon>
                 <AiOutlineHome />
               </Icon>
@@ -25,7 +25,7 @@ export const NavbarMobile = () => {
             </Link>
           </HomeButton>
           <HomeButton>
-            <Link to="/products">
+            <Link to={routes.allProducts}>
               <Icon>
                 <AiOutlineFileSearch />
               </Icon>

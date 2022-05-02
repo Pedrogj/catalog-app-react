@@ -1,7 +1,6 @@
 import { createContext, useEffect, useState } from "react";
-import { collection, getDocs, query } from "firebase/firestore";
-import { db } from "../firebase/firebaseConfig";
 import { useLoading } from "../hooks/useLoading";
+import { getAllProducts } from "../services/products";
 
 export const DataContext = createContext();
 
@@ -17,16 +16,9 @@ export const DataContextProvider = ({ children }) => {
   const getData = async () => {
     try {
       showLoading();
-      const dataRef = await getDocs(query(collection(db, "products")));
-      const dataDocs = [];
+      const products = await getAllProducts();
 
-      dataRef.forEach((item) => {
-        dataDocs.push({
-          id: item.id,
-          ...item.data(),
-        });
-      });
-      setData(dataDocs);
+      setData(products);
       hideLoading();
     } catch (error) {
       //console.log(error);
@@ -41,19 +33,19 @@ export const DataContextProvider = ({ children }) => {
 
   // GET CATEGORIES
   const getCategoriesById = (categories) => {
-    // Categorias Validas
+    // valid categories
     const validCategories = [
-      "herramientas",
-      "mascotas",
-      "piscina",
-      "tuberias",
-      "muebleria",
-      "aseo",
+      "tools",
+      "pets",
+      "pool",
+      "pipelines",
+      "furniture",
+      "cleaning",
     ];
     if (!validCategories.includes(categories)) {
       throw new Error(`${categories} is not a valid category`);
     }
-    return data.filter((e) => e.category === categories);
+    return data.filter((item) => item.category === categories);
   };
 
   const dataBase = {

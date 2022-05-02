@@ -1,19 +1,19 @@
 import React, { useContext } from "react";
 import { Routes, Route, HashRouter } from "react-router-dom";
-
 import { Home } from "../components/homeScreen/Home";
 import { Products } from "../components/productsScreen/Products";
 import { Navbar } from "../components/navbar/Navbar";
 import { ProductId } from "../components/productIdScreen/ProductId";
-import { Herramientas } from "../components/categoryScreen/Herramientas";
-import { Mascotas } from "../components/categoryScreen/Mascotas";
-import { Piscina } from "../components/categoryScreen/Piscina";
-import { Muebleria } from "../components/categoryScreen/Muebleria";
-import { Tuberias } from "../components/categoryScreen/Tuberias";
-import { Aseo } from "../components/categoryScreen/Aseo";
+import { Tools } from "../components/categoryScreen/toolsScreen/Tools";
+import { Pets } from "../components/categoryScreen/petsScreen/Pets";
+import { Pool } from "../components/categoryScreen/poolScreen/Pool";
+import { Furniture } from "../components/categoryScreen/furnitureScreen/Furniture";
+import { Pipelines } from "../components/categoryScreen/pipelinesScreen/Pipelines";
+import { Cleaning } from "../components/categoryScreen/cleaningScreen/Cleaning";
 import { DataContext } from "../context/DataContext";
 import { NotFound } from "../components/notFountScreen/NotFound";
 import { NavbarMobile } from "../components/navbarMobile/NavbarMobile";
+import { routes } from "./Routes";
 
 export const AppRouter = () => {
   const { loading } = useContext(DataContext);
@@ -22,19 +22,19 @@ export const AppRouter = () => {
       {loading}
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path={routes.root} element={<Home />} />
 
-        <Route path="/products" element={<Products />} />
-        <Route path="/product/:productId" element={<ProductId />} />
+        <Route path={routes.allProducts} element={<Products />} />
+        <Route path={routes.productDetail} element={<ProductId />} />
 
-        <Route path="/category/herramientas" element={<Herramientas />} />
-        <Route path="/category/mascotas" element={<Mascotas />} />
-        <Route path="/category/piscina" element={<Piscina />} />
-        <Route path="/category/muebleria" element={<Muebleria />} />
-        <Route path="/category/tuberias" element={<Tuberias />} />
-        <Route path="/category/aseo" element={<Aseo />} />
+        <Route path={routes.toolsScreen} element={<Tools />} />
+        <Route path={routes.petsScreen} element={<Pets />} />
+        <Route path={routes.poolScreen} element={<Pool />} />
+        <Route path={routes.furnitureScreen} element={<Furniture />} />
+        <Route path={routes.pipelinesScreen} element={<Pipelines />} />
+        <Route path={routes.cleaningScreen} element={<Cleaning />} />
 
-        <Route path="*" element={<NotFound />} />
+        <Route path={routes.notFoundScreen} element={<NotFound />} />
       </Routes>
       <NavbarMobile />
     </HashRouter>
