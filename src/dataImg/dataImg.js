@@ -9,37 +9,37 @@ export const dataImg = [
   {
     id: "1",
     image: image1,
-    url: "/category/herramientas",
+    url: "/category/tools",
     name: "Herramientas",
   },
   {
     id: "2",
     image: image2,
-    url: "/category/muebleria",
+    url: "/category/furniture",
     name: "Mueblería",
   },
   {
     id: "3",
     image: image3,
-    url: "/category/tuberias",
+    url: "/category/pipelines",
     name: "Tuberías",
   },
   {
     id: "4",
     image: image4,
-    url: "/category/piscina",
+    url: "/category/pool",
     name: "Piscina",
   },
   {
     id: "5",
     image: image5,
-    url: "/category/aseo",
+    url: "/category/cleaning",
     name: "Aseo y Limpieza",
   },
   {
     id: "6",
     image: image6,
-    url: "/category/mascotas",
+    url: "/category/pets",
     name: "Mascotas",
   },
 ];

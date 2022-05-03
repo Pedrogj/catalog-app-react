@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Routes, Route, HashRouter } from "react-router-dom";
 import { Home } from "../components/homeScreen/Home";
 import { Products } from "../components/productsScreen/Products";
@@ -14,12 +14,24 @@ import { DataContext } from "../context/DataContext";
 import { NotFound } from "../components/notFountScreen/NotFound";
 import { NavbarMobile } from "../components/navbarMobile/NavbarMobile";
 import { routes } from "./Routes";
+import { Spinner } from "../components/spinner/Spinner";
 
 export const AppRouter = () => {
   const { loading } = useContext(DataContext);
+
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowContent(true);
+    }, 2000);
+  }, []);
+
+  const requireContent = !showContent ? <Spinner /> : loading;
+
   return (
     <HashRouter>
-      {loading}
+      {requireContent}
       <Navbar />
       <Routes>
         <Route path={routes.root} element={<Home />} />
