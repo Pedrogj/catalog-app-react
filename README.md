@@ -25,7 +25,7 @@ Will need `node` and `npm` will install globally on your machine.
 - Install dependencies:
 
   with npm: `npm install`
-  with yarn: `yarn add`
+  with yarn: `yarn`
 
 - To start the server:
 
