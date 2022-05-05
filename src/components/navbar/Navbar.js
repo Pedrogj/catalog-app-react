@@ -19,7 +19,9 @@ export const Navbar = () => {
       <Wrapper>
         <Content>
           <NavLogo>
-            <ImgLogo src={logoImg} />
+            <Link to={routes.root}>
+              <ImgLogo src={logoImg} />
+            </Link>
           </NavLogo>
 
           <NavMenu>

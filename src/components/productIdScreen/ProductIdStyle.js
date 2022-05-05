@@ -78,12 +78,11 @@ export const Description = styled.p`
 `;
 
 export const Button = styled.a`
-  background-color: green;
+  background-color: #00b339;
   color: white;
   display: inline-block;
   padding: 10px 28px;
   border-radius: 8px;
-  border: 2px solid green;
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
