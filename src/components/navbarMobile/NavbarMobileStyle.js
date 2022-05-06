@@ -1,14 +1,15 @@
 import styled from "styled-components";
+import { themeValue } from "../../utils/helpers/theme";
 
 export const Div = styled.div`
   @media screen and (max-width: 960px) {
-    height: 45px;
+    height: 50px;
   }
 `;
 
 export const NavMobile = styled.nav`
-  background-color: #f2f2f2;
-  height: 4rem;
+  background-color: ${() => themeValue.ligtGreyColor};
+  height: 68px;
   position: fixed;
   width: 100%;
   bottom: 0;

@@ -1,10 +1,13 @@
 export const themeValue = {
-  typography: {
-    fontFamily: ["Poppins", "sans-serif"],
-  },
-  color: {
-    primary: "#f37b14",
-    secondary: "#8b8b83",
-    buttonWhatAapp: "#00b339",
-  },
+  // Colors
+  primary: "#f37b14",
+  ligtGreyColor: "#f2f2f2",
+  greenColor: "#00b339",
+
+  // FontSize
+  fontSize1: "60px",
+  fontSize2: "20px",
+  fontSize3: "16px",
+  fontSize4: "30px",
+  fontSize5: "12px",
 };

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { themeValue } from "../../utils/helpers/theme";
 
 export const Container = styled.div`
   display: grid;
@@ -41,5 +42,5 @@ export const TextContent = styled.div`
 `;
 
 export const H3 = styled.h3`
-  font-size: 15px;
+  font-size: ${() => themeValue.fontSize3};
 `;

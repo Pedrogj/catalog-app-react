@@ -1,16 +1,17 @@
 import styled from "styled-components";
+import { themeValue } from "../../utils/helpers/theme";
 
 export const Title = styled.h2`
   padding-top: 20px;
   padding-left: 20px;
-  font-size: 30px;
+  font-size: ${() => themeValue.fontSize4};
 
   @media (max-width: 425px) {
-    font-size: 20px;
+    font-size: ${() => themeValue.fontSize2};
   }
 
   @media (max-width: 335px) {
-    font-size: 15px;
+    font-size: ${() => themeValue.fontSize3};
   }
 `;
 
@@ -30,11 +31,11 @@ export const Text = styled.h3`
   padding-bottom: 5px;
 
   @media (max-width: 425px) {
-    font-size: 15px;
+    font-size: ${() => themeValue.fontSize3};
   }
 
   @media (max-width: 335px) {
-    font-size: 12px;
+    font-size: ${() => themeValue.fontSize5};
   }
 `;
 

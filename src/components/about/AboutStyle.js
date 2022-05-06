@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { themeValue } from "../../utils/helpers/theme";
 
 export const Section = styled.section`
   min-height: 90vh;
@@ -55,7 +56,7 @@ export const ImgBox = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 60px;
+  font-size: ${() => themeValue.fontSize1};
   margin-bottom: 20px;
 
   @media (max-width: 960px) {
@@ -64,7 +65,7 @@ export const Title = styled.h1`
 `;
 
 export const Text = styled.p`
-  font-size: 20px;
+  font-size: ${() => themeValue.fontSize2};
   font-weight: 700;
   margin-bottom: 10px;
 
@@ -75,18 +76,19 @@ export const Text = styled.p`
 `;
 
 export const Button = styled.button`
-  background-color: black;
+  background-color: ${() => themeValue.primary};
   color: white;
   display: inline-block;
   padding: 10px 28px;
   border-radius: 8px;
-  border: 2px solid #1a1a1a;
+  border: 2px solid ${() => themeValue.primary};
   cursor: pointer;
-  font-size: 16px;
+  font-size: ${() => themeValue.fontSize3};
   font-weight: 600;
   text-align: center;
   transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
   margin-top: 25px;
+  width: 200px;
 
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;

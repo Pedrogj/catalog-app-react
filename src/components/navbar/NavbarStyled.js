@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { themeValue } from "../../utils/helpers/theme";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -8,6 +9,10 @@ export const Wrapper = styled.div`
   z-index: 1;
   background: white;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+
+  @media screen and (max-width: 560px) {
+    height: 70px;
+  }
 `;
 
 export const Content = styled.div`
@@ -31,14 +36,9 @@ export const NavLogo = styled.div`
   display: flex;
   justify-self: start;
   align-items: center;
-  font-size: 1.5rem;
   color: black;
   cursor: pointer;
   text-decoration: none;
-
-  @media screen and (max-width: 960px) {
-    font-size: 1rem;
-  }
 `;
 
 export const ImgLogo = styled.img`
@@ -76,13 +76,13 @@ export const NavMenu = styled.ul`
 export const NavItem = styled.li`
   width: 100%;
   height: 80px;
-  font-size: 18px;
+  font-size: ${() => themeValue.fontSize3};
   border-bottom: 2px solid transparent;
   text-decoration: none;
 
   &:hover {
-    background-color: #ededed;
-    border-bottom: 2px solid #262626;
+    background-color: ${() => themeValue.ligtGreyColor};
+    border-bottom: 2px solid ${() => themeValue.primary};
     transition: 0.4s ease-in;
   }
 
