@@ -84,7 +84,7 @@ export const Button = styled.button`
   border: 2px solid ${() => themeValue.primary};
   cursor: pointer;
   font-size: ${() => themeValue.fontSize3};
-  font-weight: 600;
+  font-weight: ${() => themeValue.fontWeigth600};
   text-align: center;
   transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
   margin-top: 25px;

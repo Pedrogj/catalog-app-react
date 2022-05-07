@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { themeValue } from "../../utils/helpers/theme";
 
 export const DivConten = styled.div`
   height: 100vh;
@@ -16,9 +17,11 @@ export const Container = styled.div`
   }
 `;
 
-export const H1 = styled.h1`
+export const H2 = styled.h2`
+  font-size: ${() => themeValue.fontSize4};
+
   @media (max-width: 500px) {
-    font-size: 20px;
+    font-size: ${() => themeValue.fontSize2};
     margin-bottom: 20px;
   }
 `;

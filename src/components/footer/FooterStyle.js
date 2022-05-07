@@ -43,7 +43,7 @@ export const HomeText = styled.div`
   }
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h2`
   font-size: ${() => themeValue.fontSize4};
   margin-bottom: 20px;
 

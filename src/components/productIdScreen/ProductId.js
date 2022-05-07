@@ -9,7 +9,7 @@ import {
   ImgContent,
   Img,
   TextContent,
-  TextH1,
+  TextH2,
   Description,
   Button,
 } from "./ProductIdStyle";
@@ -46,7 +46,7 @@ export const ProductId = () => {
           <Img src={product.img} alt={product.name} />
         </ImgContent>
         <TextContent>
-          <TextH1>{product.name}</TextH1>
+          <TextH2>{product.name}</TextH2>
           <Description>{product.description}</Description>
           <Button target="_blank" rel="noreferrer" href={goToWhatsapp}>
             <BsWhatsapp /> Consulta

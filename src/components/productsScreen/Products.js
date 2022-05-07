@@ -11,7 +11,7 @@ import {
   Box,
   Img,
   TextContent,
-  H1,
+  H2,
   H3,
   DivConten,
 } from "./ProductsStyle";
@@ -63,7 +63,7 @@ export const Products = () => {
     <>
       <DivConten>
         <Container>
-          <H1>Productos</H1>
+          <H2>Productos</H2>
           <InputSearch searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         </Container>
         {requireContent}

@@ -1,6 +1,7 @@
 export const themeValue = {
   // Colors
   primary: "#f37b14",
+  grey: "#595959",
   ligtGreyColor: "#f2f2f2",
   greenColor: "#00b339",
 
@@ -10,4 +11,7 @@ export const themeValue = {
   fontSize3: "16px",
   fontSize4: "30px",
   fontSize5: "12px",
+
+  fontWeigth600: "600",
+  fontWeigth300: "300",
 };
