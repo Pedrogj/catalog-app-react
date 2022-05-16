@@ -47,6 +47,7 @@ export const ProductId = () => {
         </ImgContent>
         <TextContent>
           <TextH2>{product.name}</TextH2>
+          <TextH2>${product.price}</TextH2>
           <Description>{product.description}</Description>
           <Button target="_blank" rel="noreferrer" href={goToWhatsapp}>
             <BsWhatsapp /> Consulta

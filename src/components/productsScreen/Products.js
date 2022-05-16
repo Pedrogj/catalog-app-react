@@ -14,6 +14,7 @@ import {
   H2,
   H3,
   DivConten,
+  ProductPrice,
 } from "./ProductsStyle";
 
 export const Products = () => {
@@ -45,6 +46,7 @@ export const Products = () => {
         </Link>
         <TextContent>
           <H3>{item.name}</H3>
+          <ProductPrice>${item.price}</ProductPrice>
         </TextContent>
       </Box>
     );

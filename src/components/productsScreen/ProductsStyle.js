@@ -67,5 +67,9 @@ export const TextContent = styled.div`
 `;
 
 export const H3 = styled.h3`
-  font-size: 15px;
+  font-size: ${() => themeValue.fontSize3};
+`;
+
+export const ProductPrice = styled.h3`
+  font-size: ${() => themeValue.fontSize2};
 `;
