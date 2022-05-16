@@ -5,11 +5,8 @@ export const cleanSearchText = (data) => {
     ? data
         .replace("á", "a")
         .replace("é", "e")
-        .replace("í", "i")
+        .replace("i", "í")
         .replace("ó", "o")
-        .replace("ú", "u")
-        .replace("ê", "e")
-        .replace("è", "e")
-        .replace("ü", "u")
+        .replace("u", "ú")
     : data;
 };

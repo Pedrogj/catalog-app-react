@@ -15,6 +15,8 @@ import {
   H3,
   DivConten,
   ProductPrice,
+  ContentPrice,
+  Button,
 } from "./ProductsStyle";
 
 export const Products = () => {
@@ -46,8 +48,13 @@ export const Products = () => {
         </Link>
         <TextContent>
           <H3>{item.name}</H3>
-          <ProductPrice>${item.price}</ProductPrice>
         </TextContent>
+        <ContentPrice>
+          <ProductPrice>${item.price}</ProductPrice>
+          <Link to={`/product/${item.id}`}>
+            <Button>Ver Producto</Button>
+          </Link>
+        </ContentPrice>
       </Box>
     );
   });
