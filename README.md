@@ -42,10 +42,6 @@ Will need `node` and `npm` will install globally on your machine.
 
 ---
 
-![](https://github.com/Pedrogj/ferromaster-app/blob/main/images/img2.jpg)
-
----
-
 ![](https://github.com/Pedrogj/ferromaster-app/blob/main/images/img3.jpg)
 
 ---
