@@ -44,3 +44,40 @@ export const TextContent = styled.div`
 export const H3 = styled.h3`
   font-size: ${() => themeValue.fontSize3};
 `;
+
+export const ContentPrice = styled.div`
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+`;
+
+export const ProductPrice = styled.h3`
+  font-size: ${() => themeValue.fontSize2};
+`;
+
+export const Button = styled.div`
+  background-color: ${() => themeValue.primary};
+  color: white;
+  display: inline-block;
+  border-radius: 8px;
+  border: 2px solid ${() => themeValue.primary};
+  cursor: pointer;
+  font-size: ${() => themeValue.fontSize3};
+  font-weight: ${() => themeValue.fontWeigth600};
+  text-align: center;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  margin-top: 5px;
+  width: 150px;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  &:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  &:disable {
+    pointer-events: none;
+  }
+`;
