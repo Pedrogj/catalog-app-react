@@ -15,6 +15,7 @@ import { NotFound } from "../components/notFountScreen/NotFound";
 import { NavbarMobile } from "../components/navbarMobile/NavbarMobile";
 import { routes } from "./Routes";
 import { Spinner } from "../components/spinner/Spinner";
+import { ScrollToTop } from "../components/scrollToTop/ScrollToTop";
 
 export const AppRouter = () => {
   const { loading } = useContext(DataContext);
@@ -32,6 +33,7 @@ export const AppRouter = () => {
   return (
     <HashRouter>
       {requireContent}
+      <ScrollToTop/>
       <Navbar />
       <Routes>
         <Route path={routes.root} element={<Home />} />
