@@ -1,4 +1,4 @@
-import React, { useContext, useMemo } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import { useParams, Navigate, useNavigate } from "react-router-dom";
 import { DataContext } from "../../context/DataContext";
 import { BsWhatsapp } from "react-icons/bs";
@@ -14,9 +14,18 @@ import {
   Button,
 } from "./ProductIdStyle";
 import { routes } from "../../routers/Routes";
+import { Spinner } from "../spinner/Spinner";
 
 export const ProductId = () => {
   const phone = process.env.REACT_APP_MESSAGE;
+
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowContent(true);
+    }, 2000);
+  }, []);
 
   const navigate = useNavigate();
 
@@ -34,9 +43,11 @@ export const ProductId = () => {
     return <Navigate to={routes.root} />;
   }
 
-  const goToWhatsapp = `https://api.whatsapp.com/send?phone=${phone}&text=hola%20Ferromaster%20quiero%20consultar%20el%20Precio%20de:%20${product.name}`;
+  const message = "&text=hola%20Ferromaster%20esta%20disponible:%20";
 
-  return (
+  const goToWhatsapp = `https://api.whatsapp.com/send?phone=${phone}${message}${product.name}?`;
+
+  const renderProductsDetail = (
     <>
       <ContentBoton>
         <ButtonExit onClick={handleReturn}>Atras</ButtonExit>
@@ -54,6 +65,14 @@ export const ProductId = () => {
           </Button>
         </TextContent>
       </Box>
+    </>
+  )
+
+  const requireContent = !showContent ? <Spinner /> : renderProductsDetail;
+
+  return (
+    <>
+      {requireContent}
     </>
   );
 };
