@@ -33,9 +33,10 @@ export const Products = () => {
 
   // Product search function
   const search = (elements) => {
-    const text = cleanSearchText(searchTerm.toLowerCase());
+    const text = cleanSearchText(searchTerm);
+
     return elements.filter((element) =>
-      element.name.toLowerCase().includes(text)
+      cleanSearchText(element.name).includes(text)
     );
   };
 

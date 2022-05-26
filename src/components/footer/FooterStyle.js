@@ -34,6 +34,7 @@ export const Row = styled.div`
 `;
 
 export const HomeText = styled.div`
+  color: white;
   width: 100%;
   padding: 15px;
 
