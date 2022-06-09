@@ -5,10 +5,12 @@ import { About } from "../about/About";
 
 import { HomeContent } from "./HomeStyle";
 import { Footer } from "../footer/Footer";
+import { Slide } from "../slide/Slide";
 
 export const Home = () => {
   return (
     <>
+      <Slide />
       <About />
       <HomeContent>
         <SlideShow />
