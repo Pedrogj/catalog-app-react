@@ -55,15 +55,6 @@ export const ImgBox = styled.div`
   margin: auto;
 `;
 
-export const Title = styled.h1`
-  font-size: ${() => themeValue.fontSize1};
-  margin-bottom: 20px;
-
-  @media (max-width: 960px) {
-    font-size: 40px;
-  }
-`;
-
 export const Text = styled.p`
   font-size: ${() => themeValue.fontSize2};
   font-weight: 700;

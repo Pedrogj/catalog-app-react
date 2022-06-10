@@ -10,7 +10,6 @@ import {
   Section,
   ImgBox,
   Text,
-  Title,
   Button,
 } from "./AboutStyle";
 
@@ -21,7 +20,6 @@ export const About = () => {
         <Container>
           <Row>
             <HomeText>
-              <Title>FerroMaster</Title>
               <Text>
                 Dedicados a la venta en todo lo que abarca productos de
                 ferretería. Trabajamos con las marcas de herramientas y
