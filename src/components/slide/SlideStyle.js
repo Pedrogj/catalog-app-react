@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   overflow: hidden;
+
+  @media (max-width: 500px) {
+    display: none;
+  }
 `;
 
 export const Content = styled.div`
