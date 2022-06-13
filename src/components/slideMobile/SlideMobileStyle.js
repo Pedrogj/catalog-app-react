@@ -35,11 +35,7 @@ export const Content = styled(motion.div)`
     width: 62vw;
   }
 
-  @media (max-width: 415px) {
-    top: -12vh;
-  }
-
-  @media (max-width: 375px) {
+  @media (max-width: 420px) {
     top: -12vh;
   }
 
