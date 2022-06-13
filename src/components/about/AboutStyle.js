@@ -2,9 +2,12 @@ import styled from "styled-components";
 import { themeValue } from "../../utils/helpers/theme";
 
 export const Section = styled.section`
-  min-height: 90vh;
   display: flex;
   align-items: center;
+
+  @media (min-width: 500px) {
+    min-height: 90vh;
+  }
 `;
 
 export const Container = styled.div`
