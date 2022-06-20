@@ -1,6 +1,7 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { DataContext } from "../../context/DataContext";
+import { useLoadingPages } from "../../hooks/useLoadingPages";
 import { cleanSearchText } from "../../utils/helpers/helpers";
 import { InputSearch } from "../InputSearch/InputSearch";
 import { NotProduct } from "../notFountScreen/NotProduct";
@@ -21,15 +22,8 @@ import {
 
 export const Products = () => {
   const { data } = useContext(DataContext);
-
   const [searchTerm, setSearchTerm] = useState("");
-  const [showContent, setShowContent] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShowContent(true);
-    }, 2000);
-  }, []);
+  const [loading] = useLoadingPages();
 
   // Product search function
   const search = (elements) => {
@@ -67,7 +61,7 @@ export const Products = () => {
       <NotProduct />
     );
 
-  const requireContent = !showContent ? <Spinner /> : renderProducts;
+  const requireContent = !loading ? <Spinner /> : renderProducts;
 
   return (
     <>

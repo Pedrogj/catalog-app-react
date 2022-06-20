@@ -1,6 +1,7 @@
-import { useContext, useEffect, useMemo, useState } from "react";
+import { useContext, useMemo } from "react";
 import { useParams, Navigate, useNavigate } from "react-router-dom";
 import { DataContext } from "../../context/DataContext";
+import { useLoadingPages } from "../../hooks/useLoadingPages";
 import { BsWhatsapp } from "react-icons/bs";
 import {
   ContentBoton,
@@ -19,13 +20,7 @@ import { Spinner } from "../spinner/Spinner";
 export const ProductId = () => {
   const phone = process.env.REACT_APP_MESSAGE;
 
-  const [showContent, setShowContent] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShowContent(true);
-    }, 2000);
-  }, []);
+  const [loading] = useLoadingPages();
 
   const navigate = useNavigate();
 
@@ -66,13 +61,9 @@ export const ProductId = () => {
         </TextContent>
       </Box>
     </>
-  )
-
-  const requireContent = !showContent ? <Spinner /> : renderProductsDetail;
-
-  return (
-    <>
-      {requireContent}
-    </>
   );
+
+  const requireContent = !loading ? <Spinner /> : renderProductsDetail;
+
+  return <>{requireContent}</>;
 };

@@ -19,7 +19,6 @@ import { ScrollToTop } from "../components/scrollToTop/ScrollToTop";
 
 export const AppRouter = () => {
   const { loading } = useContext(DataContext);
-
   const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
@@ -33,7 +32,7 @@ export const AppRouter = () => {
   return (
     <HashRouter>
       {requireContent}
-      <ScrollToTop/>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path={routes.root} element={<Home />} />

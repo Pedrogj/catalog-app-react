@@ -1,27 +1,22 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { DataContext } from "../../context/DataContext";
+import { useLoadingPages } from "../../hooks/useLoadingPages";
 import { routes } from "../../routers/Routes";
-import { 
-  Container, 
-  Box, Img, 
-  TextContent, 
-  H3, 
-  ContentPrice, 
-  ProductPrice, 
-  Button 
+import {
+  Container,
+  Box,
+  Img,
+  TextContent,
+  H3,
+  ContentPrice,
+  ProductPrice,
+  Button,
 } from "./CategoryListStyle";
 import { Spinner } from "../spinner/Spinner";
 
 export const CategoryList = ({ category }) => {
-
-  const [showContent, setShowContent] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShowContent(true);
-    }, 2000);
-  }, []);
+  const [loading] = useLoadingPages();
 
   const { getCategoriesById } = useContext(DataContext);
 
@@ -40,11 +35,11 @@ export const CategoryList = ({ category }) => {
         <Link to={`/product/${item.id}`}>
           <Button>Ver Producto</Button>
         </Link>
-        </ContentPrice>
+      </ContentPrice>
     </Box>
   ));
 
-  const requireContent = !showContent ? <Spinner /> : requireProducts;
+  const requireContent = !loading ? <Spinner /> : requireProducts;
 
   return (
     <>
