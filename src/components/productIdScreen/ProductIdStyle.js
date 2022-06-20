@@ -79,7 +79,8 @@ export const Button = styled.a`
   background-color: ${() => themeValue.greenColor};
   color: white;
   display: inline-block;
-  padding: 10px 28px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   border-radius: 8px;
   cursor: pointer;
   font-size: ${() => themeValue.fontSize3};
@@ -87,7 +88,7 @@ export const Button = styled.a`
   text-align: center;
   transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
   margin-top: 25px;
-  width: 200px;
+  width: 150px;
 
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
@@ -102,7 +103,6 @@ export const Button = styled.a`
   }
 
   @media (max-width: 500px) {
-    padding: 5px 20px;
     width: 100%;
   }
 `;

@@ -42,10 +42,10 @@ export const ProductContent = styled.div`
   }
 
   @media (max-width: 1080px) {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
   }
-  @media (max-width: 800px) {
-    grid-template-columns: repeat(1, 1fr);
+  @media (max-width: 770px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 
@@ -54,6 +54,13 @@ export const Box = styled.div`
   box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   transition: transform 0.3s;
+
+  @media (max-width: 770px) {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    align-content: space-between;
+  }
 `;
 
 export const Img = styled.img`
@@ -70,6 +77,10 @@ export const TextContent = styled.div`
 
 export const H3 = styled.h3`
   font-size: ${() => themeValue.fontSize3};
+
+  @media (max-width: 960px) {
+    font-size: ${() => themeValue.fontSize5};
+  }
 `;
 
 export const ContentPrice = styled.div`
@@ -80,6 +91,10 @@ export const ContentPrice = styled.div`
 
 export const ProductPrice = styled.h3`
   font-size: ${() => themeValue.fontSize2};
+
+  @media (max-width: 400px) {
+    font-size: ${() => themeValue.fontSize3};
+  }
 `;
 
 export const Button = styled.div`
@@ -95,6 +110,13 @@ export const Button = styled.div`
   transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
   margin-top: 5px;
   width: 150px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  @media (max-width: 400px) {
+    width: 100%;
+    font-size: ${() => themeValue.fontSize5};
+  }
 
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
