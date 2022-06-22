@@ -109,12 +109,11 @@ export const Button = styled.div`
   text-align: center;
   transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
   margin-top: 5px;
-  width: 150px;
+  width: 100%;
   padding-top: 5px;
   padding-bottom: 5px;
 
   @media (max-width: 400px) {
-    width: 100%;
     font-size: ${() => themeValue.fontSize5};
   }
 
