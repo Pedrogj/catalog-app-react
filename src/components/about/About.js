@@ -15,29 +15,27 @@ import {
 
 export const About = () => {
   return (
-    <>
-      <Section>
-        <Container>
-          <Row>
-            <HomeText>
-              <Text>
-                Dedicados a la venta en todo lo que abarca productos de
-                ferretería. Trabajamos con las marcas de herramientas y
-                productos mas sobresalientes del mercado chileno.
-              </Text>
+    <Section>
+      <Container>
+        <Row>
+          <HomeText>
+            <Text>
+              Dedicados a la venta en todo lo que abarca productos de
+              ferretería. Trabajamos con las marcas de herramientas y productos
+              mas sobresalientes del mercado chileno.
+            </Text>
 
-              <Link to="/products">
-                <Button>Ver Productos</Button>
-              </Link>
-            </HomeText>
-            <HomeImg>
-              <ImgBox>
-                <Img src={logo} alt="ferromaster-logo" />
-              </ImgBox>
-            </HomeImg>
-          </Row>
-        </Container>
-      </Section>
-    </>
+            <Link to="/products">
+              <Button>Ver Productos</Button>
+            </Link>
+          </HomeText>
+          <HomeImg>
+            <ImgBox>
+              <Img src={logo} alt="ferromaster-logo" />
+            </ImgBox>
+          </HomeImg>
+        </Row>
+      </Container>
+    </Section>
   );
 };

@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { dataImg } from "../../dataImg/dataImg";
-import { Title, Box, Text, Content, Img } from "./HomeCategoryStyle";
+import { Title, Box, Text, Content, Img, Container } from "./HomeCategoryStyle";
 
 export const HomeCategory = () => {
   return (
-    <>
+    <Container>
       <Title>Categorías</Title>
       <Box>
         {dataImg.map((item) => (
@@ -17,6 +17,6 @@ export const HomeCategory = () => {
           </Content>
         ))}
       </Box>
-    </>
+    </Container>
   );
 };

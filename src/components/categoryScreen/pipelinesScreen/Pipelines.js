@@ -5,7 +5,7 @@ import { Title } from "../CategoriesStyled";
 export const Pipelines = () => {
   return (
     <>
-      <Title>Tuberías</Title>
+      <Title>Categoría / Tuberías</Title>
       <CategoryList category="pipelines" />
     </>
   );

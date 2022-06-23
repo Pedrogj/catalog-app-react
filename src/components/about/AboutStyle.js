@@ -20,9 +20,13 @@ export const Container = styled.div`
   }
 `;
 
-export const Img = styled.img`
-  max-width: 100%;
-  vertical-align: middle;
+export const Row = styled.div`
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 960px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const HomeText = styled.div`
@@ -35,29 +39,6 @@ export const HomeText = styled.div`
   }
 `;
 
-export const HomeImg = styled.div`
-  width: 50%;
-  padding: 15px;
-
-  @media (max-width: 960px) {
-    width: 100%;
-  }
-`;
-
-export const Row = styled.div`
-  display: flex;
-  align-items: center;
-
-  @media (max-width: 960px) {
-    flex-wrap: wrap;
-  }
-`;
-
-export const ImgBox = styled.div`
-  max-width: 360px;
-  margin: auto;
-`;
-
 export const Text = styled.p`
   font-size: ${() => themeValue.fontSize2};
   font-weight: 700;
@@ -67,6 +48,33 @@ export const Text = styled.p`
     font-size: 15px;
     font-weight: 700;
   }
+`;
+
+export const HomeImg = styled.div`
+  width: 50%;
+  padding: 15px;
+
+  @media (max-width: 960px) {
+    width: 100%;
+  }
+`;
+
+export const ImgBox = styled.div`
+  max-width: 360px;
+  margin: auto;
+
+  @media (max-width: 425px) {
+    max-width: 250px;
+  }
+
+  @media (max-width: 320px) {
+    max-width: 200px;
+  }
+`;
+
+export const Img = styled.img`
+  max-width: 100%;
+  vertical-align: middle;
 `;
 
 export const Button = styled.button`

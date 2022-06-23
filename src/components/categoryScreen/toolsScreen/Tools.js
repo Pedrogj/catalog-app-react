@@ -5,7 +5,7 @@ import { Title } from "../CategoriesStyled";
 export const Tools = () => {
   return (
     <>
-      <Title>Herramientas</Title>
+      <Title>Categoría / Herramientas</Title>
       <CategoryList category="tools" />
     </>
   );

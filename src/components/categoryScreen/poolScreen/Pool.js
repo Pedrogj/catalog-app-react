@@ -5,7 +5,7 @@ import { Title } from "../CategoriesStyled";
 export const Pool = () => {
   return (
     <>
-      <Title>Piscina</Title>
+      <Title>Categoría / Piscina</Title>
       <CategoryList category="pool" />
     </>
   );

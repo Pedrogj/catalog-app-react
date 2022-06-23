@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { themeValue } from "../../utils/helpers/theme";
 
+export const Container = styled.div`
+  padding: 20px;
+`;
+
 export const Title = styled.h2`
   padding-top: 20px;
   padding-left: 20px;

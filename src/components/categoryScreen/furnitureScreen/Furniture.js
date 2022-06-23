@@ -5,7 +5,7 @@ import { Title } from "../CategoriesStyled";
 export const Furniture = () => {
   return (
     <>
-      <Title>Mueblería</Title>
+      <Title>Categoría / Mueblería</Title>
       <CategoryList category="furniture" />
     </>
   );

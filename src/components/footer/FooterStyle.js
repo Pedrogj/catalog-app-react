@@ -14,16 +14,6 @@ export const Section = styled.footer`
   }
 `;
 
-export const Container = styled.div`
-  padding: 0px 25px 0px 25px;
-  display: flex;
-
-  @media (max-width: 960px) {
-    padding: 0;
-    flex-wrap: wrap;
-  }
-`;
-
 export const Row = styled.div`
   display: flex;
   align-items: center;
