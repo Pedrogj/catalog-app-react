@@ -1,5 +1,37 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { themeValue } from "../../utils/helpers/theme";
+
+export const ContentLink = styled.div`
+  padding-left: 20px;
+`;
+
+export const LinkBack = styled(Link)`
+  background-color: ${() => themeValue.primary};
+  color: white;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 2px solid ${() => themeValue.primary};
+  cursor: pointer;
+  font-size: ${() => themeValue.fontSize3};
+  font-weight: ${() => themeValue.fontWeigth600};
+  text-align: center;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  margin-top: 20px;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  &:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  &:disable {
+    pointer-events: none;
+  }
+`;
 
 export const Container = styled.div`
   display: grid;

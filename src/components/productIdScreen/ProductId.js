@@ -4,7 +4,7 @@ import { DataContext } from "../../context/DataContext";
 import { useLoadingPages } from "../../hooks/useLoadingPages";
 import { BsWhatsapp } from "react-icons/bs";
 import {
-  ContentBoton,
+  ContentButton,
   ButtonExit,
   Box,
   ImgContent,
@@ -44,9 +44,9 @@ export const ProductId = () => {
 
   const renderProductsDetail = (
     <>
-      <ContentBoton>
+      <ContentButton>
         <ButtonExit onClick={handleReturn}>Atras</ButtonExit>
-      </ContentBoton>
+      </ContentButton>
       <Box>
         <ImgContent>
           <Img src={product.img} alt={product.name} />

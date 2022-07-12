@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { themeValue } from "../../utils/helpers/theme";
 
-export const ContentBoton = styled.div`
+export const ContentButton = styled.div`
   padding-left: 35px;
 
   @media (max-width: 980px) {

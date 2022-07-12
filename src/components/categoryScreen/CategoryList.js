@@ -12,8 +12,11 @@ import {
   ContentPrice,
   ProductPrice,
   Button,
+  LinkBack,
+  ContentLink,
 } from "./CategoryListStyle";
 import { Spinner } from "../spinner/Spinner";
+import { NotProduct } from "../notFountScreen/NotProduct";
 
 export const CategoryList = ({ category }) => {
   const [loading] = useLoadingPages();
@@ -21,6 +24,10 @@ export const CategoryList = ({ category }) => {
   const { getCategoriesById } = useContext(DataContext);
 
   const products = getCategoriesById(category);
+
+  if (products.length < 1) {
+    return <NotProduct />;
+  }
 
   const requireProducts = products.map((item) => (
     <Box key={item.id}>
@@ -43,7 +50,9 @@ export const CategoryList = ({ category }) => {
 
   return (
     <>
-      <Link to={routes.root}></Link>
+      <ContentLink>
+        <LinkBack to={routes.root}>Regresar</LinkBack>
+      </ContentLink>
       <Container>{requireContent}</Container>
     </>
   );
