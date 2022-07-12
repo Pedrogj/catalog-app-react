@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { themeValue } from "../../utils/helpers/theme";
 
 export const Section = styled.section`
@@ -38,8 +39,11 @@ export const HomeText = styled.div`
     text-align: center;
   }
 `;
+export const TextH1 = styled.h1`
+  font-size: ${() => themeValue.fontSize6};
+`;
 
-export const Text = styled.p`
+export const TextP = styled.p`
   font-size: ${() => themeValue.fontSize2};
   font-weight: 700;
   margin-bottom: 10px;
@@ -77,7 +81,7 @@ export const Img = styled.img`
   vertical-align: middle;
 `;
 
-export const Button = styled.button`
+export const Button = styled(Link)`
   background-color: ${() => themeValue.primary};
   color: white;
   display: inline-block;

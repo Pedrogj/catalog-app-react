@@ -11,6 +11,7 @@ export const themeValue = {
   fontSize3: "16px",
   fontSize4: "30px",
   fontSize5: "13px",
+  fontSize6: "45px",
 
   fontWeigth600: "600",
   fontWeigth300: "300",

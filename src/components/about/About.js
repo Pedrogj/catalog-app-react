@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "./../../img/logo.png";
-import { Link } from "react-router-dom";
 import {
   Container,
   HomeImg,
@@ -9,7 +8,8 @@ import {
   Row,
   Section,
   ImgBox,
-  Text,
+  TextH1,
+  TextP,
   Button,
 } from "./AboutStyle";
 
@@ -19,19 +19,18 @@ export const About = () => {
       <Container>
         <Row>
           <HomeText>
-            <Text>
+            <TextH1>FerroMaster</TextH1>
+            <TextP>
               Dedicados a la venta en todo lo que abarca productos de
               ferretería. Trabajamos con las marcas de herramientas y productos
               mas sobresalientes del mercado chileno.
-            </Text>
+            </TextP>
 
-            <Link to="/products">
-              <Button>Ver Productos</Button>
-            </Link>
+            <Button to="/products">Ver Productos</Button>
           </HomeText>
           <HomeImg>
             <ImgBox>
-              <Img src={logo} alt="ferromaster-logo" />
+              <Img src={logo} alt="ferromaster" />
             </ImgBox>
           </HomeImg>
         </Row>
