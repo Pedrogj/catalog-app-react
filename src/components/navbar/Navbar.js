@@ -11,6 +11,7 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
+  Box,
 } from "./NavbarStyled";
 
 export const Navbar = () => {
@@ -38,6 +39,7 @@ export const Navbar = () => {
           </NavMenu>
         </Content>
       </Wrapper>
+      <Box></Box>
     </>
   );
 };

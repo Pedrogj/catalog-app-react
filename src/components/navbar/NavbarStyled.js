@@ -4,7 +4,7 @@ import { themeValue } from "../../utils/helpers/theme";
 export const Wrapper = styled.div`
   width: 100%;
   height: 80px;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 10;
   background: white;
@@ -99,4 +99,12 @@ export const NavLinks = styled.div`
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
+`;
+
+export const Box = styled.div`
+  height: 80px;
+
+  @media (max-width: 560px) {
+    height: 70px;
+  }
 `;
