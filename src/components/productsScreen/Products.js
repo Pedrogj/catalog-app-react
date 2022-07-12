@@ -14,7 +14,7 @@ import {
   TextContent,
   H2,
   H3,
-  DivConten,
+  Content,
   ProductPrice,
   ContentPrice,
   Button,
@@ -65,13 +65,13 @@ export const Products = () => {
 
   return (
     <>
-      <DivConten>
+      <Content>
         <Container>
           <H2>Productos</H2>
           <InputSearch searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         </Container>
         {requireContent}
-      </DivConten>
+      </Content>
     </>
   );
 };

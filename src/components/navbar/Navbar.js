@@ -24,7 +24,6 @@ export const Navbar = () => {
               <ImgLogo src={logoImg} />
             </Link>
           </NavLogo>
-
           <NavMenu>
             <Link to={routes.root}>
               <NavItem>

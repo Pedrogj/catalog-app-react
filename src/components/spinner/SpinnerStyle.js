@@ -16,7 +16,3 @@ export const Loader = styled.div`
   justify-content: center;
   z-index: 9999;
 `;
-
-export const Img = styled.img`
-  width: 300px;
-`;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { themeValue } from "../../utils/helpers/theme";
 
-export const DivConten = styled.div`
+export const Content = styled.div`
   height: 100vh;
 `;
 

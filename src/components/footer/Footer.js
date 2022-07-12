@@ -50,7 +50,7 @@ export const Footer = () => {
         </HomeText>
         <HomeImg>
           <ImgBox>
-            <Img src={logo} alt="ferromaster-logo" />
+            <Img src={logo} alt="buy card" />
           </ImgBox>
         </HomeImg>
       </Section>
