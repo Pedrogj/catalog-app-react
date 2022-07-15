@@ -27,7 +27,7 @@ export const Box = styled.div`
   padding: 20px;
 
   @media (max-width: 768px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 `;
 

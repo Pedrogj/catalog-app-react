@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import img1 from "../../img/slide1.jpg";
-import img2 from "../../img/slide2.jpg";
-import img3 from "../../img/slide3.jpg";
+import { slideDesktop } from "../../dataImageSlide/slides";
 import {
   Container,
   Content,
@@ -66,20 +64,16 @@ export const Slide = () => {
     }
   };
 
+  const requiredSlideImg = slideDesktop.map((item) => (
+    <SlideImg key={item.id}>
+      <Img src={item.image} alt={item.alt} />
+    </SlideImg>
+  ));
+
   return (
     <Container>
       <Content>
-        <ContentSlide ref={slideShow}>
-          <SlideImg>
-            <Img src={img1} alt="" />
-          </SlideImg>
-          <SlideImg>
-            <Img src={img2} alt="" />
-          </SlideImg>
-          <SlideImg>
-            <Img src={img3} alt="" />
-          </SlideImg>
-        </ContentSlide>
+        <ContentSlide ref={slideShow}>{requiredSlideImg}</ContentSlide>
         <ContentButtons>
           <Button onClick={previous}>
             <IoIosArrowBack />

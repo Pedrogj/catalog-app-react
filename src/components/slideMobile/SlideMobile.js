@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import { Container, Row, Content, Img } from "./SlideMobileStyle";
-import { slides } from "../../dataImage/slides";
+import { slides } from "../../dataImageSlide/slides";
 
 export const SlideMobile = () => {
   const [position, setPosition] = useState(0);
@@ -32,7 +32,7 @@ export const SlideMobile = () => {
       }}
       transition={{ type: "spring", stiffness: 260, damping: 20 }}
     >
-      <Img src={item.image} alt="" />
+      <Img src={item.image} alt={item.alt} />
     </Content>
   ));
 

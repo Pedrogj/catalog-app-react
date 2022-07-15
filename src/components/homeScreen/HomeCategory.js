@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { dataImg } from "../../dataImg/dataImg";
+import { dataImg } from "../../dataImageCategories/dataImg";
 import { Title, Box, Text, Content, Img, Container } from "./HomeCategoryStyle";
 
 export const HomeCategory = () => {
